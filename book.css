@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+}
+
+a
+{ text-decoration: none;}
+a:hover
+{ text-decoration: none;}
+#header
+{ color:#fff;
+background:#e74c3c;}
+
+#logo
+{ font-size: 3rem;
+margin-top:5px;}
+#menu
+{ list-style-position:none;
+margin:0;
+padding:0;}
+#menu li
+{ display: inline-block;}
+#menu li a
+{ color:black;
+padding:15px 10px;
+display: block;}
+#menu li a:hover
+{ background-color: #EFEAD8;}
+
+.search{
+  width: 500px;
+  display: flex;
+}
+
+.search-box{
+  width: 80%;
+  height: 40px;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #EFEAD8;
+  text-transform: capitalize;
+  background: none;
+  color: #fff;
+  outline: none;
+}
+
+.search-btn{
+  width: 20%;
+  height: 40px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #D0C9C0;
+  color: #6D8B74;
+  text-transform: capitalize;
+  font-size: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+  .search-box::placeholder{
+    color: #a9a9a9;
+  }
+
+
+.card:hover{
+  -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -qpx 9px 40px -12px rgba(0,0,0,0.75);
+  box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+}
+
+#footer{
+  background-color: #5F7161;
+}

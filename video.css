@@ -1,0 +1,213 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+}
+
+a
+{ text-decoration: none;}
+a:hover
+{ text-decoration: none;}
+#header
+{ color:#fff;
+background:#e74c3c;}
+
+#logo
+{ font-size: 3rem;
+margin-top:5px;}
+#menu
+{ list-style-position:none;
+margin:0;
+padding:0;}
+#menu li
+{ display: inline-block;}
+#menu li a
+{ color:black;
+padding:15px 10px;
+display: block;}
+#menu li a:hover
+{ background-color: #EFEAD8;}
+
+
+    .nav-items a{
+      margin-left: 20px;
+    }
+
+    .nav-items a img{
+      width: 30px;
+    }
+
+    .links-container1{
+      width: 100%;
+      display: flex;
+      padding: 10px 10vw;
+      justify-content: center;
+      list-style: none;
+      border-top: 1px solid #d1d1d1;
+    }
+
+    .link{
+      text-transform: capitalize;
+      padding: 0 10px;
+      margin: 0 5px;
+      text-decoration: none;
+      color: #6D8B74;
+      opacity: 0.5;
+      transition: .5s;
+      font-size: 20px;
+    }
+
+     .link:hover{
+       opacity: 1;
+     }
+
+   .heading{
+       color:#5F7161 ;
+       font-size: 40px;
+           text-align: center;
+           padding: 10px;
+
+       }
+
+       .container1{
+         display: grid;
+         grid-template-columns: 2fr 1fr;
+         gap: 15px;
+         align-items: flex-start;
+         padding: 5px 5%;
+       }
+
+       .container2{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+        align-items: flex-start;
+        padding: 5px 5%;
+        background-color: #fff ;
+           border-radius: 5px;
+           padding: 10px;
+      }
+
+
+      #comment-box, #post {
+
+        border-radius: 15px;
+    }
+    #post:hover{
+        background-color: deeppink;
+    }
+
+       .container1 .main-video{
+           background-color: #fff ;
+           border-radius: 5px;
+           padding: 10px;
+       }
+
+       .container1 .main-video video{
+           width: 100%;
+           border-radius: 5px;
+       }
+
+       .container1 .main-video .title{
+           color: #5f7161;
+           font-size: 23px;
+           padding-top: 15px;
+           padding-bottom: 15px;
+         }
+         input{
+          width: 50px;
+          border: none;
+          background: none;
+          color: #919191;
+          font-size: 30px;
+          pointer-events: none;
+      }
+
+      button{
+        color: #fff;
+        background:none;
+        border: none;
+        font-size: 30px;
+        padding: 0 15px;
+        margin: 10px 0;
+        margin-left: 20px;
+        cursor:pointer;
+      }
+
+      button:active{
+          color: #004eff;
+          transform:scale(1.2);
+      }
+
+
+
+         .container1 .video-list{
+           background: #fff;
+               border-radius: 5px;
+               height: 520px;
+               overflow-y: scroll;
+           }
+
+           .container1 .video-list::-webkit-scrollbar{
+               width: 7px ;
+           }
+
+           .container1 .video-list::-webkit-scrollbar-track{
+               background: #666;
+               border-radius: 50px;
+
+           }
+
+           .container1 .video-list::-webkit-scrollbar-thumb{
+               width: 7px ;
+           }
+
+           .container1 .video-list .vid video{
+               width: 100px;
+               border-radius: 5px;
+           }
+
+           .container1 .video-list .vid{
+               display: flex;
+               align-items: center;
+               gap: 15px;
+               background: #f7f7f7;
+               border-radius: 5px;
+               margin: 10px;
+               padding: 10px;
+               border: 1px solid #EFEAD8;
+               cursor: pointer;
+           }
+
+           .container1 .video-list .vid:hover{
+               background: #D0C9C0;
+           }
+           .container1 .video-list .vid.active{
+               background: #6D8B74;
+           }
+
+           .container1 .video-list .vid.active .title{
+               background: #fff;
+           }
+
+           .container1 .video-list .vid .title{
+             color: #333;
+             font-size: 17px;
+           }
+
+           @media (max-width: 991px) {
+
+               .container1{
+                   grid-template-columns: 1.5fr 1fr;
+                   padding: 10px;
+                 }
+           }
+
+           @media (max-width: 768px) {
+
+               .container1{
+                   grid-template-columns: 1fr 1fr;
+
+                 }
+           }

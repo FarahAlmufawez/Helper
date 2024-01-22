@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="video.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <title>Vidoes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+<script>
+ function myFunction1() {
+    alert("You have logged out successfully!");
+ }
+</script>
+<body style="background-color:#EFEAD8">
+
+  <div style="background:#5F7161;">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-4"><h1 id="logo">HELPER</hl></div>
+
+    <div class="col-md-8">
+    <ul id="menu" class="Float-right"><li><a href="mynew.php">Home</a></li>
+    <li><a href="mynew.php">Calculator</a></li>
+    <li><a href="book.html">Books</a></li>
+    <li><a href="video.html">Videos</a></li>
+    <li><a href="test6.php">Questions</a></li>
+    <li><a href="test5.php">Appointments</a></li>
+    <li><a href="login.php">Login</a></li>
+    <li><a href="logout.php" onclick="alert('You have logged out successfully!');">Logout</a></li>
+  </ul>
+  </div>
+    </div>
+    </div>
+    </div>
+
+       <h3 class="heading">Learning Videos</h3>
+
+         <div class="container1">
+
+   <div class="main-video">
+   <div class="video">
+  <video src="Algebra Basics.mp4" controls muted autoplay></video>
+ </div>
+
+ <h4 class="video-active-title">01.Algebra Basics</h4>
+ <div class="voting">
+ <button id="likebtn">
+ <i class="fa fa-thumbs-up"></i>
+  </button>
+
+ <input type="number" id="input1" value="0" name="">
+
+  <button id="dislikebtn">
+    <i class="fa fa-thumbs-down"></i>
+ </button>
+
+ <input type="number" id="input2" value="0" name="">
+    </div>
+   </div>
+
+
+ <div class="video-list">
+     <div class="vid active">
+    <video src="Algebra Basics.mp4" muted></video>
+    <h3 class="title">01.Algebra Basics</h3>
+  </div>
+
+ <div class="video-list">
+     <div class="vid">
+    <video src="Domain and Range of a Function.mp4" muted></video>
+    <h3 class="title">02.Domain and Range of a Function</h3>
+   </div>
+
+  <div class="vid">
+   <video src="Introduction to Inverse Functions.mp4" muted></video>
+    <h3 class="title">03.Introduction to Inverse Functions</h3>
+ </div>
+
+ <div class="vid">
+ <video src="Chain Rule For Finding Derivatives.mp4" muted></video>
+ <h3 class="title">04.Chain Rule For Finding Derivatives</h3>
+</div>
+
+ <div class="vid">
+  <video src="Limits and Continuity.mp4" muted></video>
+   <h3 class="title">05.Limits and Continuity</h3>
+  </div>
+
+ <div class="vid">
+    <video src="Algebra Basics.mp4" muted></video>
+     <h3 class="title">06.Algebra Basics</h3>
+   </div>
+
+   <div class="vid">
+      <video src="Introduction to Inverse Functions.mp4" muted></video>
+      <h3 class="title">07.Introduction to Inverse Functions</h3>
+   </div>
+
+  <div class="vid">
+    <video src="Limits and Continuity.mp4" muted></video>
+    <h3 class="title">08.Limits and Continuity</h3>
+   </div>
+
+ <div class="vid">
+    <video src="Chain Rule For Finding Derivatives.mp4" muted></video>
+     <h3 class="title">09.Chain Rule For Finding Derivatives</h3>
+   </div>
+
+ <div class="vid">
+    <video src="Algebra Basics.mp4" muted></video>
+    <h3 class="title">10.Algebra Basics</h3>
+       </div>
+    </div>
+ </div>
+</div>
+
+
+
+<script>
+
+
+
+
+var post= document.getElementById("post");
+
+if(post != null){
+  post.addEventListener("click", function(){
+    var commentBoxValue= document.getElementById("comment-box").value;
+
+    var li = document.createElement("li");
+    var text = document.createTextNode(commentBoxValue);
+    li.appendChild(text);
+    document.getElementById("unordered").appendChild(li);
+
+});
+}
+
+
+ let listVideo = document.querySelectorAll('.video-list .vid');
+    let mainVideo = document.querySelector('.main-video video');
+    var title = document.querySelector('.video-active-title');
+
+
+
+   listVideo.forEach(video =>{
+     video.onclick = () => {
+      listVideo.forEach(vid => vid.classList.remove('active'));
+      video.classList.add('active');
+
+      if(video.classList.contains('active')){
+        let src = video.children[0].getAttribute('src');
+            mainVideo.src = src;
+            title.innerHTML = video.children[1].innerHTML
+       };
+      };
+   });
+
+
+
+
+let input1 = document.querySelector("#input1");
+let input2 = document.querySelector("#input2");
+
+$("#likebtn").on("click", function () {
+  var parent_element = $(this).parent().parent();
+  var video_text = parent_element.find(".video-active-title").html();
+
+  if (video_text != "") {
+    let video_information = video_text.split(".");
+
+    let video_id = video_information[0];
+    let video_title = video_information[1];
+
+    $.ajax({
+      url: "ajax.php",
+      type: "post",
+      data: { video_id: video_id, video_title: video_title,video_action:"Like"},
+      success: function (response) {
+        // console.log(response);
+
+        if(response == 1){
+          input1.value = parseInt(input1.value) + 1;
+          input1.style.color = "#00802b";
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown);
+      },
+    });
+  }
+});
+
+
+$("#dislikebtn").on("click", function () {
+  var parent_element = $(this).parent().parent();
+  var video_text = parent_element.find(".video-active-title").html();
+
+  if (video_text != "") {
+    let video_information = video_text.split(".");
+
+    let video_id = video_information[0];
+    let video_title = video_information[1];
+
+    $.ajax({
+      url: "ajax.php",
+      type: "post",
+      data: { video_id: video_id, video_title: video_title,video_action:"Dislike"},
+      success: function (response) {
+        if(response == 1){
+            input2.value = parseInt(input2.value) + 1;
+            input2.style.color = "#ff4d4d";
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown);
+      },
+    });
+  }
+});
+
+    </script>
+  </body>
+ </html>
